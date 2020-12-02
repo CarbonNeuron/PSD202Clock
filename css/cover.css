@@ -1,0 +1,68 @@
+:root {
+    color-scheme: dark light; /* stylelint-disable-line property-no-unknown */
+  
+    --heading-color: red;
+    --duration: 0.5s;
+    --timing: ease;
+}
+
+fieldset {
+    border: solid 0.1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--shadow-color);
+    transition: box-shadow var(--duration) var(--timing);
+  }
+
+body {
+    transition:
+      color var(--duration) var(--timing),
+      background-color var(--duration) var(--timing);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+.darkmode-toggle {
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    border-radius: 50%;
+    border:none;
+    right: 32px;
+    bottom: 32px;
+    left: unset;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode-toggle--white {
+    background: #fff;
+}
+
+#dark-mode-toggle-1 {
+    --dark-mode-toggle-dark-icon: url("/images/sun.svg");
+    --dark-mode-toggle-light-icon: url("/images/moon.svg");
+    --dark-mode-toggle-icon-size: 2rem;
+    --dark-mode-toggle-icon-filter: invert(100%);
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    left: unset;
+  }

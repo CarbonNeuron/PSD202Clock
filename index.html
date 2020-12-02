@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="High school clock">
+        <meta name="author" content="Carbon">
+        <title>High school clock</title>
+        <!-- Bootstrap core CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+		<!--  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> -->
+		
+		<link rel="stylesheet" href="/css/cover.css">
+
+		<link rel="stylesheet" href="/css/lightbootstrap.min.css" media="(prefers-color-scheme: light)">
+		<link rel="stylesheet" href="/css/darkbootstrap.min.css" media="(prefers-color-scheme: dark)">
+		<script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" id="StickyNavBar">
+            <div class="container">
+                <a class="navbar-brand" href="#">School clock</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">High school
+                            <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Middle school</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Elementary school</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:1114892@psd202.org">Contact</a>
+						</li>
+						<li class="nav-item">
+                            
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Full Page Image Header with Vertically Centered Content -->
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="font-weight-light display-1" id="period">Loading...</h1>
+                        <p class="lead display-3" id="Timer"></p>
+					</div>
+                    <footer class="footer">
+                        <div class="container text-center">
+                            <p>School clock for <a href="https://psd202.org/">PSD202</a>, by Carbon</a>.</p>
+                        </div>
+					</footer>
+					<dark-mode-toggle id="dark-mode-toggle-1" appearance="toggle" permanent></dark-mode-toggle>
+                </div>
+            </div>
+		</header>
+		
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js" integrity="sha256-OVk2fwTRcXYlVFxr/ECXsakqelJbOg5WCj1dXSIb+nU=" crossorigin="anonymous"></script>
+		<script src="js/HighSchoolClock.js"></script>
+		<script src="js/darkmode.js"></script>
+    </body>
+</html>
+
