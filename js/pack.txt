@@ -1,0 +1,1 @@
+browserify -p tinyify HighSchoolClock.js -o bundle.js -g uglifyify

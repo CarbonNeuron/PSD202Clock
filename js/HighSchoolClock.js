@@ -148,15 +148,15 @@ function updateThing() {
     lastperiod = Period;
     if (Period.startsWith("Break")) {
         document.getElementById("Timer").innerHTML = `Ends in: ${zeroPad(mins,2)}:${zeroPad(secs, 2)}`;
-        document.title = `${Period} | ${mins}:${zeroPad(secs, 2)}`
+        document.title = `${mins}:${zeroPad(secs, 2)}`
     }
     else if (Period == "After School" || Period == "Weekend") {
         document.getElementById("Timer").innerHTML = `School starts in: ${zeroPad(actualHours,2)}:${zeroPad(mins,2)}:${zeroPad(secs, 2)}`;
-        document.title = `${Period} | ${actualHours}:${zeroPad(mins,2)}:${zeroPad(secs, 2)}`
+        document.title = `${actualHours}:${zeroPad(mins,2)}:${zeroPad(secs, 2)}`
     }
     else {
         document.getElementById("Timer").innerHTML = `Ends in: ${zeroPad(mins,2)}:${zeroPad(secs, 2)}`;
-        document.title = `${Period} | ${mins}:${zeroPad(secs, 2)}`
+        document.title = `${mins}:${zeroPad(secs, 2)}`
     }
     document.getElementById("period").innerHTML = `${Period}`;
     setTimeout(()=>{updateThing();},local.plus({second: 1, millisecond: -local.millisecond}).diffNow().milliseconds)
