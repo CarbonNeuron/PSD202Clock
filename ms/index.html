@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+		<script defer src="/fontawesome/js/all.min.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="High school clock">
+        <meta name="author" content="Carbon">
+        <title>High school clock</title>
+        <!-- Bootstrap core CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+		<!--  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> -->
+		
+		<link rel="stylesheet" href="/css/cover.css">
+		<link href="/css/bootstrap4-toggle.min.css" rel="stylesheet">
+		<script defer src="/fontawesome/js/regular.min.js"></script>
+		<link rel="stylesheet" href="/css/lightbootstrap.min.css" media="(prefers-color-scheme: light)">
+		<link rel="stylesheet" href="/css/darkbootstrap.min.css" media="(prefers-color-scheme: dark)">
+		<script type="module" src="/js/dark-mode-toggle.mjs"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" id="StickyNavBar">
+            <div class="container">
+                <a class="navbar-brand" href="#">School clock</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">High school</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link " href="#">Middle school
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:1114892@psd202.org">Contact</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<!-- Full Page Image Header with Vertically Centered Content -->
+		
+        <header class="masthead">
+			
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="font-weight-light display-1" id="period">Loading...</h1>
+                        <p class="lead display-3" id="Timer"></p>
+					</div>
+                    <footer class="footer">
+                        <div class="container text-center">
+                            <p>School clock for <a href="https://psd202.org/">PSD202</a>, by Carbon</a>.</p>
+                        </div>
+					</footer>
+					
+				</div>
+				<div class="controlBox">
+					<input id="mute" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-on="<i class='fa fa-volume-up'></i>" data-off="<i class='fa fa-volume-off'></i>">
+					<dark-mode-toggle id="dark-mode-toggle-1" appearance="toggle" permanent></dark-mode-toggle>
+				</div>
+				
+			</div>
+		</header>
+		
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-3.5.1.slim.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap4-toggle.min.js"></script>
+		<script src="/js/howler.min.js"></script>
+		<script src="/js/luxon.min.js"></script>
+        <script src="/js/MiddleSchoolClock.js"></script>
+		<script src="/js/darkmode.js"></script>
+    </body>
+</html>
+

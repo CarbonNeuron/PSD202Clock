@@ -19,7 +19,11 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-
+.navbar {
+    transition:
+        color var(--duration) var(--timing),
+        background-color var(--duration) var(--timing);
+}
 .masthead {
     height: 100vh;
     min-height: 500px;
@@ -33,23 +37,38 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-  }
+}
 
-.darkmode-toggle {
-    background: #100f2c;
-    width: 3rem;
-    height: 3rem;
+
+
+.controlBox {
     position: fixed;
     border-radius: 50%;
     border:none;
     right: 32px;
-    bottom: 32px;
+    bottom: 5vh;
     left: unset;
+    justify-content: center;
+}
+.darkmode-toggle {
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.audio-toggle {
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    transition: all 0.5s ease;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .darkmode-toggle--white {
@@ -61,8 +80,5 @@ body {
     --dark-mode-toggle-light-icon: url("/images/moon.svg");
     --dark-mode-toggle-icon-size: 2rem;
     --dark-mode-toggle-icon-filter: invert(100%);
-    position: fixed;
-    right: 32px;
-    bottom: 32px;
-    left: unset;
+    text-align: center;
   }

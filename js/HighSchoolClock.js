@@ -48,20 +48,20 @@ function zeroPad(num, places) {
     return Array(+(zero > 0 && zero)).join("0") + num;
 }
 function FindPeriod(Seconds) {
+    let length = ClassSchedule.length;
 	if (ClassSchedule[0] > Seconds)
 	{
 		//If its out of bounds
 		return 999;
 	}
-	else if (ClassSchedule[15] < Seconds)
-	{
+	else if (ClassSchedule[length - 1] < Seconds) {
 		return 1000;
 	}
 
 	//else if (ClassSchedule[15] > Seconds && ClassSchedule[16] < Seconds) {
 	//  return 16;
 	//}
-	for (var i = 0; i < 15; i++)
+	for (var i = 0; i < ClassSchedule.length-1; i++)
 	{
 		if (Seconds >= ClassSchedule[i] && Seconds < ClassSchedule[i + 1])
 		{
@@ -140,7 +140,10 @@ function updateThing() {
     let secs = (SecondsRemaining % 3600) % 60;
     let actualHours = Math.floor(SecondsRemaining / 3600);
     if(lastperiod != "" && Period != lastperiod) {
-        sound.play() //Play sound
+        if($('#mute').prop('checked') == true){ //Backwards I know.
+            sound.play() //Play sound
+        }
+            
     }
     lastperiod = Period;
     if (Period.startsWith("Break")) {
@@ -159,7 +162,7 @@ function updateThing() {
     setTimeout(()=>{updateThing();},local.plus({second: 1, millisecond: -local.millisecond}).diffNow().milliseconds)
 }
 const sound = new Howl({
-    src: ['audio/tone2.ulaw.wav'],
+    src: ['/sounds/tone2.ulaw.wav'],
     volume: 0.25
 });
 

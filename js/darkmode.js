@@ -1,3 +1,13 @@
+let gdata = localStorage.getItem("mute");
+if(gdata == "true") {
+    $('#mute').bootstrapToggle('off');
+}
+else {
+    $('#mute').bootstrapToggle('on');
+}
+
+
+
 document.addEventListener('colorschemechange', (e) => {
     console.log(`Color scheme changed to ${e.detail.colorScheme}.`);
     if(e.detail.colorScheme == "light") {
@@ -21,3 +31,15 @@ function disableDarkTheme() {
     DARK_STYLE_LINK.setAttribute("href", LIGHT_THEME_PATH);
     THEME_TOGGLER.innerHTML = "☀️ Light";
 }
+
+$(function() {
+    $('#mute').change(function() {
+      console.log('Toggle: ' + $(this).prop('checked'))
+      if($(this).prop('checked')) {
+        localStorage.setItem("mute", "false");
+      }
+      else {
+        localStorage.setItem("mute", "true");
+      }
+    })
+})
